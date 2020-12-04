@@ -1,0 +1,8 @@
+config BR2_PACKAGE_CUMULOCITY_SDK_C
+	bool "cumulocity-sdk-c"
+	select BR2_PACKAGE_LIBCURL
+	select BR2_PACKAGE_LUA
+	help
+	  Cumulocity SDK for C
+
+	  http://www.softwareag.com/

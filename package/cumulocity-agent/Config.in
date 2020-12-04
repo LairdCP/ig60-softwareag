@@ -1,0 +1,8 @@
+config BR2_PACKAGE_CUMULOCITY_AGENT
+	bool "cumulocity-agent"
+	select BR2_PACKAGE_CUMULOCITY_SDK_C
+	select BR2_PACKAGE_LIBMODBUS
+	help
+	  Cumulocity Agent for IG60
+
+	  http://www.softwareag.com/

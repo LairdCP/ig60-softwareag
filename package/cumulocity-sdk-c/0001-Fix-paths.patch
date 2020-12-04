@@ -1,0 +1,31 @@
+diff -Naur a/include/srluapluginmanager.h b/include/srluapluginmanager.h
+--- a/include/srluapluginmanager.h	2020-08-07 16:05:10.000000000 +0000
++++ b/include/srluapluginmanager.h	2020-11-19 19:07:58.957481824 +0000
+@@ -31,7 +31,7 @@
+ #include <lualib.h>
+ }
+ 
+-#include "../ext/LuaBridge/Source/LuaBridge/LuaBridge.h"
++#include <LuaBridge.h>
+ #include "sragent.h"
+ #include "srnetbinhttp.h"
+ 
+diff -Naur a/include/srnetmqtt.h b/include/srnetmqtt.h
+--- a/include/srnetmqtt.h	2020-08-07 16:05:10.000000000 +0000
++++ b/include/srnetmqtt.h	2020-11-19 19:07:31.489481824 +0000
+@@ -24,7 +24,7 @@
+ #include <string>
+ #include <algorithm>
+ #include <vector>
+-#include "../ext/pahomqtt/MQTTPacket/src/MQTTPacket.h"
++#include <MQTTPacket.h>
+ #include "srnetsocket.h"
+ 
+ /**
+diff -Naur a/init.mk b/init.mk
+--- a/init.mk	1970-01-01 00:00:00.000000000 +0000
++++ b/init.mk	2020-11-19 19:06:42.417481824 +0000
+@@ -0,0 +1,3 @@
++SR_PLUGIN_LUA:=1
++CPPFLAGS+=-Iext/pahomqtt/MQTTPacket/src -Iext/LuaBridge/Source/LuaBridge
++LDLIBS:=-llua -lcurl

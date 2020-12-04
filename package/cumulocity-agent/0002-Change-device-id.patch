@@ -1,0 +1,50 @@
+diff -Naur a/src/demoagent.cc b/src/demoagent.cc
+--- a/src/demoagent.cc	2020-06-04 12:27:42.000000000 +0000
++++ b/src/demoagent.cc	2020-12-01 14:59:00.937481824 +0000
+@@ -169,38 +169,7 @@
+     if (isValid(s))
+             return s;
+ 
+-    // Devices with BIOS
+-    s = searchPathForDeviceID("/sys/devices/virtual/dmi/id/product_serial");
+-    if (isValid(s))
+-    {
+-        return s;
+-    }
+-
+-    // Raspberry PI
+-    s = searchTextForSerial("/proc/cpuinfo");
+-    if (!s.empty())
+-    {
+-        return s;
+-    }
+-
+-    // Virtual Machine
+-    s = searchPathForDeviceID("/sys/devices/virtual/dmi/id/product_uuid");
+-    if (isValid(s))
+-    {
+-        return s;
+-    }
+-
+-    // AWS Paravirtual Instance
+-    s = searchPathForDeviceID("/sys/hypervisor/uuid");
+-    if (isValid(s))
+-        return s;
+-
+-    // dbus - interprocess communication (IPC) devices
+-    s = searchPathForDeviceID("/var/lib/dbus/machine-id");
+-    if (isValid(s))
+-    {
+-        return s;
+-    }
++   
+ 
+     // systemd (init system)
+     s = searchPathForDeviceID("/etc/machine-id");
+@@ -283,4 +252,4 @@
+ uint64_t bitAnd(uint64_t value, uint64_t mask)
+ {
+         return value & mask;
+-}
++}
+\ No newline at end of file
