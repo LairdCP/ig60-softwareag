@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ETH_STATIC_IP
+	bool "eth-static-ip"
+	help
+	  Configure static IP address for Ethernet
