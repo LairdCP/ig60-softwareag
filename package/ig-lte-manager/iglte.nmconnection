@@ -2,6 +2,7 @@
 id=iglte
 uuid=5ddd0f6b-f9a3-4f87-989a-5f3681cf302b
 type=ethernet
+autoconnect-priority=10
 autoconnect-retries=0
 interface-name=usb0
 metered=1
