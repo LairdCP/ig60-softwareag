@@ -1,0 +1,4 @@
+config BR2_PACKAGE_IG_LTE_MANAGER
+	bool "ig-lte-manager"
+	help
+	  LTE Modem Manager service for IG60

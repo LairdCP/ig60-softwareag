@@ -1,3 +1,4 @@
 source "$BR2_EXTERNAL_SOFTWAREAG_PATH/package/cumulocity-sdk-c/Config.in"
 source "$BR2_EXTERNAL_SOFTWAREAG_PATH/package/cumulocity-agent/Config.in"
 source "$BR2_EXTERNAL_SOFTWAREAG_PATH/package/eth-static-ip/Config.in"
+source "$BR2_EXTERNAL_SOFTWAREAG_PATH/package/ig-lte-manager/Config.in"
