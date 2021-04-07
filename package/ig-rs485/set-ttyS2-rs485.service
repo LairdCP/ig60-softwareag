@@ -1,0 +1,11 @@
+[Unit]
+Description=IG60 RS-485 Configuration
+Wants=network.target cumulocity-agent.service
+After=network.target
+Before=cumulocity-agent.service
+
+[Service]
+ExecStart=python3 /usr/bin/set-ttyS2-rs485.py
+
+[Install]
+WantedBy=multi-user.target

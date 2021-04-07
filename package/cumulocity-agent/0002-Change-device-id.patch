@@ -1,6 +1,6 @@
 diff -Naur a/src/demoagent.cc b/src/demoagent.cc
---- a/src/demoagent.cc	2020-06-04 12:27:42.000000000 +0000
-+++ b/src/demoagent.cc	2021-02-23 19:27:59.855764229 +0000
+--- a/src/demoagent.cc	2021-01-05 14:24:16.000000000 +0000
++++ b/src/demoagent.cc	2021-04-05 16:45:13.754227386 +0000
 @@ -127,34 +127,22 @@
      return 0;
  }
@@ -88,8 +88,8 @@ diff -Naur a/src/demoagent.cc b/src/demoagent.cc
      return isValid(s) ? s : "";
  }
 diff -Naur a/src/integrate.cc b/src/integrate.cc
---- a/src/integrate.cc	2020-06-04 12:27:42.000000000 +0000
-+++ b/src/integrate.cc	2021-02-23 19:27:53.983764229 +0000
+--- a/src/integrate.cc	2021-01-05 14:24:16.000000000 +0000
++++ b/src/integrate.cc	2021-04-05 16:45:13.754227386 +0000
 @@ -74,9 +74,11 @@
          string s = "301,";
          string model, rev;
@@ -105,10 +105,10 @@ diff -Naur a/src/integrate.cc b/src/integrate.cc
          {
              return -1;
 diff -Naur a/srtemplate.txt b/srtemplate.txt
---- a/srtemplate.txt	2020-06-04 12:27:42.000000000 +0000
-+++ b/srtemplate.txt	2021-02-23 19:27:40.551764229 +0000
+--- a/srtemplate.txt	2021-01-05 14:24:16.000000000 +0000
++++ b/srtemplate.txt	2021-04-05 16:56:59.498227386 +0000
 @@ -1,9 +1,9 @@
--cumulocity-agent_4.2.8
+-cumulocity-agent_4.2.9
 +Laird_IG60_agent
  
  10,300,GET,/identity/externalIds/c8y_Serial/%%,,application/vnd.com.nsn.cumulocity.externalId+json,%%,STRING,
@@ -119,13 +119,12 @@ diff -Naur a/srtemplate.txt b/srtemplate.txt
  
  10,302,POST,/identity/globalIds/%%/externalIds,application/json,,%%,STRING STRING,"{""externalId"":""%%"",""type"":""c8y_Serial""}"
  
-@@ -11,7 +11,8 @@
+@@ -11,7 +11,7 @@
  
  10,304,PUT,/devicecontrol/operations/%%,application/json,,%%,UNSIGNED STRING,"{""status"":""FAILED"",""failureReason"":""%%""}"
  
 -10,305,PUT,/inventory/managedObjects/%%,application/json,,%%,UNSIGNED STRING STRING STRING STRING STRING STRING STRING STRING STRING STRING INTEGER STRING STRING STRING STRING STRING INTEGER,"{""c8y_Network"":{""c8y_WAN"":{""simStatus"":""%%"",""apn"":""%%"",""username"":""%%"",""password"":""%%"",""authType"":""%%"",""ip"":""%%""},""c8y_LAN"":{""name"":""%%"",""mac"":""%%"",""ip"":""%%"",""netmask"":""%%"",""enabled"":%%},""c8y_DHCP"":{""addressRange"":{""start"":""%%"",""end"":""%%""},""dns1"":""%%"",""dns2"":""%%"",""domainName"":""%%"",""enabled"":%%}}}"
-+10,305,PUT,/inventory/managedObjects/%%,application/json,,%%,UNSIGNED STRING STRING STRING STRING STRING STRING STRING STRING STRING STRING INTEGER STRING STRING STRING STRING STRING INTEGER,"{""c8y_Network"":{""c8y_WAN"":{""simStatus"":""%%"",""apn"":""%%"",""user
-+"":""%%"",""password"":""%%"",""authType"":""%%"",""ip"":""%%""},""c8y_LAN"":{""name"":""%%"",""mac"":""%%"",""ip"":""%%"",""netmask"":""%%"",""enabled"":%%},""c8y_DHCP"":{""addressRange"":{""start"":""%%"",""end"":""%%""},""dns1"":""%%"",""dns2"":""%%"",""domainName"":""%%"",""enabled"":%%}}}"
++10,305,PUT,/inventory/managedObjects/%%,application/json,,%%,UNSIGNED STRING STRING STRING STRING STRING STRING STRING STRING STRING STRING INTEGER STRING STRING STRING STRING STRING INTEGER,"{""c8y_Network"":{""c8y_WAN"":{""simStatus"":""%%"",""apn"":""%%"",""user"":""%%"",""password"":""%%"",""authType"":""%%"",""ip"":""%%""},""c8y_LAN"":{""name"":""%%"",""mac"":""%%"",""ip"":""%%"",""netmask"":""%%"",""enabled"":%%},""c8y_DHCP"":{""addressRange"":{""start"":""%%"",""end"":""%%""},""dns1"":""%%"",""dns2"":""%%"",""domainName"":""%%"",""enabled"":%%}}}"
  
  10,306,PUT,/inventory/managedObjects/%%,application/json,,%%,UNSIGNED STRING STRING STRING STRING STRING STRING STRING STRING STRING STRING STRING NUMBER NUMBER NUMBER,"{""c8y_Mobile"":{""cellId"":""%%"",""mcc"":""%%"",""imei"":""%%"",""iccid"":""%%"",""mnc"":""%%"",""imsi"":""%%"",""lac"":""%%"",""msisdn"":""%%"",""connType"":""%%"",""currentOperator"":""%%"",""currentBand"":""%%"",""rssi"":""%%"",""ecn0"":""%%"",""rcsp"":""%%""}}"
  

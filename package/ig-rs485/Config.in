@@ -1,0 +1,4 @@
+config BR2_PACKAGE_IG_RS485
+	bool "ig-rs485"
+	help
+	  Configure serial port for RS-485 at boot

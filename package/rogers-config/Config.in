@@ -1,0 +1,5 @@
+config BR2_PACKAGE_ROGERS_CONFIG
+	bool "rogers-config"
+	depends on BR2_PACKAGE_CUMULOCITY_AGENT
+	help
+	  Configuration file for Rogers Machinery

@@ -1,5 +1,6 @@
 TARGETS = \
-	  cumulocity_agent
+	  cumulocity_agent \
+	  rogers
 
 MK_DIR = $(realpath $(dir $(firstword $(MAKEFILE_LIST))))
 BR_DIR = $(realpath $(MK_DIR)/../buildroot)
