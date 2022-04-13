@@ -1,0 +1,4 @@
+config BR2_PACKAGE_PYADS
+	bool "pyads"
+	help
+	  https://github.com/chwiede/pyads
